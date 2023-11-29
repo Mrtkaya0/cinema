@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+:root{
+    /* renkler */
+
+    --backroundColor: rgb(231, 0, 0);
+    --seat-color:rgb(0, 0, 0);
+    --text-color:white;
+    --selected-color:rgb(255, 170, 13);
+    --reserve-color: rgba(255, 255, 255, 0.418);
+    --info-backround:rgba(0,0,0,0.2); 
+}
+body{
+    background-color:black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+
+}
+section{
+    background-color: var(--backroundColor);
+    box-shadow: 1px 2px 10px 3px rgba(255, 255, 255, 1);
+    padding: 20px;
+
+}
+
+
+.screen{
+    height: 100px;
+    width: 100%;
+    margin-bottom: 15px;
+    border-radius: 7px;
+    box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 1);
+
+}
+.screen img{
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+}
+
+.seatRow{
+    display: flex;
+    justify-content: center;
+    align-items: center
+}
+
+.seat{
+    font-size: 15px;
+    margin: 5px;
+    transition: all .3s ease;
+    color: black;
+}
+.seat:not(.reserve):hover{
+    cursor: pointer;
+    transform: scale(1.3);
+    
+}
+
+.seat.reserve{
+    color: var(--reserve-color);
+}
+.seat.selected{
+    color: var(--selected-color);
+}
+
+/* <!-- film seçim alanı --> */
+.movie-list{
+    margin-left: 35px;
+    border: none;
+    
+  
+}
+
+
+
+
+
+/* <!-- koltuk film ve ücret seçme alanı --> */
+
+.info{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--info-backround);
+    gap: 5px;
+    border-radius: 8px;
+    padding: 5px 10px;
+    margin-top: 65px;
+}
+
+.info li{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-size: 10px;
+}
+#koltuk {
+    color: var(--selected-color);
+}
+
+
+/* ücret toplam bilgi alanı  */
+
+.info-text{
+    color: var(--reserve-color);
+    margin: 25px 0px;
+    display: none;
+}
+.info-text span{
+    color:var(--selected-color);
+}
+.open{
+    display: flex;
+}
